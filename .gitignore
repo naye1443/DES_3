@@ -8,3 +8,6 @@ googletest
 #Ignore any Binarys or Object files
 bin/**
 DES3
+
+#Ignore mac files
+.DS_Store
