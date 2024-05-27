@@ -1,0 +1,10 @@
+# Ignore googletest for unit testing
+googletest
+
+# Ignore any Vscode config files
+*.json
+**/.vscode/
+
+#Ignore any Binarys or Object files
+bin/**
+DES3

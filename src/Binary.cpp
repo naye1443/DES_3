@@ -158,6 +158,7 @@ string Binary::hex2dec(string s){
 	return dec;
 }
 
+
 std::string Binary::Dec_to_Bin(int n)
 {
 
@@ -209,4 +210,29 @@ string Binary::hex2char(string hex){
 	}	
 
 	return valuestring;
+}
+
+// Description: Interchanges Bits in strings with corresponding indexes given.
+// Input: Two Unsigned Integers to be manipulated & Two Unsigned Integers represenging strings indexs.
+// Output: None.
+void Binary::swapbits(unsigned int &bitstr1, unsigned int &bitstr2, unsigned int p1, unsigned int p2){
+
+    // Move bitmasks to furthest rightside and mask bits
+    unsigned int bitmask1 = (bitstr1 >> p1) & 1;
+    unsigned int bitmask2 = (bitstr2 >> p2) & 1;
+
+    // XOR the two bits to toggle bits
+    unsigned int x = bitmask1 ^ bitmask2;
+    unsigned int y = x;
+
+    // Move bits to respective places before right-rotation
+    x = (x << p1);
+    y = (y << p2);
+
+    // take info stored by its and toggle respective bits to flip them
+    // Need to find a way to split bits
+    bitstr1 = bitstr1 ^ x;
+    bitstr2 = bitstr2 ^ y;
+
+    return;
 }

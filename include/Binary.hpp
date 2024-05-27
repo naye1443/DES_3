@@ -27,7 +27,7 @@ public:
 
     static std::string hex2dec(std::string s); // Hexadecimal to decimal number
 
-    static unsigned int swapbits(unsigned int &bitstr1, unsigned int &bitstr2, unsigned int i); // Used to swap bits of detemined given bit strings
+    static void swapbits(unsigned int &bitstr1, unsigned int &bitstr2, unsigned int p1, unsigned int p2); // Used to swap bits of detemined given bit strings
 
 };
 
